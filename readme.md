@@ -22,7 +22,8 @@
 8. [Datasets](#datasets)
 9. [Computational Resources](#computational-resources)
 10. [Demo](#demo)
-11. [Support](#support)
+11. [Sample Clinical Cases](#sample-clinical-cases)
+12. [Support](#support)
 
 ---
 
@@ -277,6 +278,38 @@ A comprehensive video demonstration of the RBC Mbaza application is available:
 - Core features demonstration
 - Data entry and patient management
 - Troubleshooting common issues
+
+---
+
+## Sample Clinical Cases
+
+Real-world examples of consultation recordings captured during the silent trial study are provided below. These samples demonstrate the types of clinical interactions recorded by the application.
+
+### Case K0101: Male Patient with Cough (Clinical Case - Approved)
+
+**Description:** This case involves a male patient presenting with cough. This is a clinical case that met the study inclusion criteria and was approved for analysis.
+
+**Audio File:** [K0101-sample.mp4](K0101-sample.mp4)  
+**Duration:** ~5 minutes  
+**Language:** Kinyarwanda  
+**Status:** ✅ Clinically relevant - Included in AI evaluation analysis
+
+**Key Elements:**
+- Patient chief complaint: Cough
+- CHW clinical assessment and examination findings
+- Preliminary diagnosis or referral decision
+- Example of structured consultation captured for analysis
+
+### Case K0102: Female Patient - Family Planning Consultation (Non-Clinical - Not Accepted)
+
+**Description:** This case involves a female patient seeking family planning advice. This case was not clinically relevant to the study scope and was excluded from the AI evaluation analysis.
+
+**Audio File:** [K0102-sample.mp4](K0102-sample.mp4)  
+**Duration:** ~8 minutes  
+**Language:** Kinyarwanda  
+**Status:** ❌ Non-clinical - Excluded from analysis
+
+**Note:** This sample is included to demonstrate the types of consultations that fall outside the study scope. The silent trial focused on clinical diagnoses and referral decisions, excluding preventive health, family planning, and administrative consultations.
 
 ---
 
