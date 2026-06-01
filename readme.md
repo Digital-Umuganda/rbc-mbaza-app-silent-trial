@@ -191,15 +191,6 @@ The RBC Mbaza application collects health and administrative data including:
 - **Health Information:** Chief complaints, vital signs, diagnoses, treatments
 - **Administrative Data:** Visit dates, CHW information, facility references
 
-### Data Privacy and Anonymity
-
-All collected personally identifiable information (PII) is processed through a systematic anonymization protocol:
-
-- PII is encrypted during transmission and storage
-- Unique patient identifiers are generated and separated from personal details
-- Data processing follows local and international data protection standards
-- Healthcare workers access only authorized data relevant to their patients
-- Regular audits ensure compliance with data protection policies
 
 ### Data Cleaning and Preprocessing
 
@@ -214,14 +205,14 @@ All collected personally identifiable information (PII) is processed through a s
 
 ### Source Code
 
-- **Code Repository:** [Specify repository location upon publication]
-- **Status:** Available upon request to registered users and authorized researchers
-- **License:** [Specify appropriate license]
+- **Code Repository:** https://github.com/digitalumuganda/rbc-mbaza-app (when released)
+- **Status:** Application code available under CC BY-NC-SA 4.0 license
+- **License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
 ### Test Datasets
 
 - **Availability:** Sample/anonymized datasets available for integration testing
-- **Access:** Contact the development team for access credentials
+- **Access:** Contact info@digitalumuganda.com for access credentials
 
 ### Compiled Application
 
@@ -232,7 +223,7 @@ All collected personally identifiable information (PII) is processed through a s
 
 - **Readme File:** Included in this documentation
 - **Installation Instructions:** Included in this documentation
-- **API Documentation:** [Available at specified location]
+- **API Documentation:** Available upon request from the development team
 
 ### Code Access After Publication
 
@@ -249,54 +240,19 @@ Information on obtaining code and data post-publication is available through:
 
 All data collected through the RBC Mbaza application originates from:
 
-1. **Direct patient encounters** with registered community health workers
-2. **Healthcare facilities** participating in the RBC Mbaza network
-3. **Community-based health programs** utilizing the application
+**Direct patient encounters** with select community health workers from Nyabihu and Musanze
 
-### Dataset Splits
 
-**Training/Development Dataset:**
-- Used for application feature development and testing
-- Anonymized and cleaned
-- Sample size: [Specify based on deployment]
-
-**Validation Dataset:**
-- Used for ongoing quality assurance
-- Real-world data from field deployments
-- Sample size: [Specify based on deployment]
-
-**Testing Dataset:**
-- Independent dataset used for final system evaluation
-- Collected from different geographical regions or time periods
-- Sample size: [Specify based on deployment]
-
-### Data Splitting Method
-
-- **Time-based splitting:** Data is organized chronologically to reflect real-world deployment scenarios
-- **Geographic splitting:** Testing data includes information from distinct regions not used in training
-- **Stratified splitting:** Data distribution ensures representation across various demographic groups
 
 ### Public Availability
 
 - **Current Status:** Data is not publicly available due to patient privacy considerations
 - **Restricted Access:** Anonymized research datasets are available to approved researchers under data use agreements
-- **Request Process:** Contact [specify department/email] to request research datasets
+- **Request Process:** Contact info@digitalumuganda.com to request research datasets. All requests must include: intended use, research institution, data protection plan, and ethics approval documentation
 
 ---
 
 ## Computational Resources
-
-### Hardware and Infrastructure
-
-**Development and Testing:**
-- Server specifications: [Specify]
-- Storage capacity: [Specify]
-- Network infrastructure: [Specify]
-
-**Deployment Infrastructure:**
-- Cloud platform: [AWS/GCP/Azure - specify which]
-- Database: [Specify database technology]
-- API servers: [Specify specifications]
 
 ### Computational Costs
 
@@ -305,7 +261,7 @@ All data collected through the RBC Mbaza application originates from:
 | **Computation Time** | Mobile app operates locally; server-side processing < 2 seconds per request |
 | **Storage Requirements** | ~100MB for application package; database scales with users |
 | **Network Bandwidth** | Varies with data synchronization frequency |
-| **Carbon Footprint** | [Minimal - device-based processing; minimal server load] |
+
 
 ### Performance Metrics
 
@@ -339,9 +295,9 @@ A comprehensive video demonstration of the RBC Mbaza application is available:
 
 **For Technical Issues:**
 - **Help Section:** Access the **Ubufasha** (Help) menu within the application
-- **Email Support:** [specify support email]
-- **Phone Support:** [specify support phone number]
-- **Hours:** [specify support hours]
+- **Email Support:** info@digitalumuganda.com
+- **Phone Support:** Available through Digital Umuganda contact center
+- **Hours:** Monday-Friday, 8:00 AM - 5:00 PM CAT
 
 ### Reporting Issues
 
@@ -355,48 +311,46 @@ When reporting issues, please include:
 ### Feedback and Feature Requests
 
 We welcome feedback to improve the RBC Mbaza application:
-- Send feedback to: [specify feedback email]
-- Submit feature requests through the help portal
-- Participate in user surveys and testing
+- Send feedback to: info@digitalumuganda.com
+- Submit feature requests through the application's help portal
+- Participate in user surveys and testing programs
 
 ---
 
 ## Additional Information
 
-### Security and Privacy
-
-The RBC Mbaza application implements multiple security layers:
-- End-to-end encryption for sensitive data
-- Role-based access control
-- Secure authentication with OTP verification
-- Regular security audits and updates
-- Compliance with data protection regulations
-
 ### Version History
 
 | Version | Release Date | Key Changes |
 |---|---|---|
-| 1.0 | [Specify date] | Initial release |
-| [Future] | [Date] | [Changes] |
+| 1.0 | June 2026 | Initial release - Community health worker data collection system with offline support |
 
 ### Contact and Attribution
 
 **Development Organization:** Digital Umuganda
 
 **Contact Information:**
-- Email: [specify contact email]
-- Website: [specify website]
-- Address: [specify address]
+- Email: info@digitalumuganda.com
+- Website: https://digitalumuganda.com/
+- Country: Rwanda
 
-**Contributors:** [List key team members if applicable]
+**Contributors:** Digital Umuganda Development Team
 
 ---
 
 ## License
 
-The RBC Mbaza application is provided under [specify license].
+The RBC Mbaza application is provided under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
 
-For questions about licensing and usage rights, please contact [specify contact].
+### What This License Means:
+
+- ✅ **You can:** Use, modify, and distribute the application for non-commercial purposes
+- ✅ **You must:** Give credit to Digital Umuganda and share improvements under the same license
+- ❌ **You cannot:** Use this application for commercial purposes without explicit written permission
+
+For questions about licensing, commercial use, or alternative licensing options, please contact info@digitalumuganda.com.
+
+**Full License Text:** See the [LICENSE](LICENSE) file in this repository or visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ---
 
