@@ -1,8 +1,9 @@
-# RBC Mbaza Application
+# RBC Mbaza Silent Trial Data Capture Application
 
 **Version:** 1.0  
 **Last Updated:** 2026  
-**Platform:** Android Mobile Application
+**Platform:** Android Mobile Application  
+**Purpose:** Research Data Capture Tool for Silent Trial Study
 
 ---
 
@@ -13,8 +14,8 @@
 3. [System Requirements](#system-requirements)
 4. [Installation Guide](#installation-guide)
 5. [Usage](#usage)
-   - [Registration](#registration)
-   - [Login](#login)
+   - [CHW Access and Authentication](#chw-access-and-authentication)
+   - [Recording Patient Consultations](#recording-patient-consultations)
    - [Application Features](#application-features)
 6. [Data Collection](#data-collection)
 7. [Code and Data Availability](#code-and-data-availability)
@@ -27,27 +28,30 @@
 
 ## Overview
 
-The RBC Mbaza application is a mobile health information system designed to facilitate community health worker data collection in field settings. The application streamlines the collection of patient information while maintaining data privacy and anonymity through systematic processing and secure storage.
+This is the mobile data capture application developed for the RBC Mbaza silent trial study. The app was specifically designed to record and digitize patient-CHW consultations for research analysis. During the study (2024-2026), 150+ community health workers in Rwanda used this app to capture 429+ consultation encounters, enabling comprehensive evaluation of AI-assisted clinical decision-making.
 
-**Key Capabilities:**
-- Patient registration and information collection
-- Community health worker management
-- Secure data storage and transmission
-- Multi-language support (including local languages)
-- Offline functionality for areas with limited connectivity
+⚠️ **Research Study Tool:** This application was developed specifically for the RBC Mbaza silent trial study (2024-2026) to capture and analyze consultation data for AI evaluation research. This is **not** a production health information system and is **not** intended for ongoing clinical use beyond the study period.
+
+**Primary Functions:**
+- Real-time audio recording of patient-CHW consultations
+- Capture other key patient information (e.g Malaria test results)
+- Patient follow up after 3 days and/or 14 days
+- Offline data capture and automatic upload when connectivity is restored
 
 ---
 
 ## Background
 
-The RBC Mbaza application serves as a critical data collection tool for community health workers (CHWs) operating in resource-constrained settings. The mobile application is designed to facilitate comprehensive patient information gathering, from personal identifiable information (PII) to general health metrics. All collected information is processed and stored to ensure data anonymity and compliance with data protection standards.
+The RBC Mbaza application was developed as a specialized tool for a non-interventional "silent trial" study conducted in Rwanda. This groundbreaking research initiative was designed to evaluate the potential of generative artificial intelligence (GenAI) to support community health workers (CHWs) in more effectively diagnosing and treating common health concerns, while reducing unnecessary referrals to health facilities. The study involved 150+ CHWs across 2 distrcits of Rwanda who used the Mbaza application to record and document patient interactions, enabling advanced analysis of diagnostic accuracy and clinical decision-making.
 
-### Purpose
+### Overall Purpose
 
-- Enable efficient data collection at the point of care
-- Support community health workers in their daily operations
-- Create standardized, anonymous health records
-- Facilitate health system monitoring and evaluation
+- Record and transcribe patient-CHW conversations 
+- Capture clinical interactions in local languages (Kinyarwanda) for analysis
+- Support evaluation of AI-assisted diagnostic and referral decision-making
+- Assess the effectiveness of large language models in supporting CHW clinical judgment
+- Maintain complete confidentiality and anonymity of patient information throughout the research process
+- Contribute to evidence on how AI can improve healthcare delivery in resource-constrained settings
 
 ---
 
@@ -128,56 +132,46 @@ The APK file (`rbc-mbaza-silent-trial-demo-app.apk`) is available in this reposi
 
 ## Usage
 
-### Registration
+### CHW Access and Authentication
 
-#### Community Health Worker Registration
+Community health workers who participated in the study used the following process to access the application:
 
-Community health workers must register before they can use the application. The registration process collects the following information:
-
-**Required Information:**
-- Full name
-- Phone number **(must be a valid Rwandan mobile number)**
-- Location (district/administrative area)
-
-**Registration Process:**
-
+**Registration:**
 1. Tap **IYANDIKISHE** (Registration) on the landing screen
-2. Enter your full name
-3. Enter your active phone number
-4. Select your location/district
+2. Enter your full name, demographics and active Rwandan phone number
+3. Select your location/district
+4. Enter the Health center you are affiliated with
 5. Tap **EMEZA** (Confirm)
-6. You will receive a **One-Time Password (OTP)** via SMS on your registered phone number
-7. Enter the OTP on the verification screen
-8. Upon successful verification, you will be granted access to the application
+6. Receive One-Time Password (OTP) via SMS
+7. Enter OTP on verification screen to gain access
 
-#### Patient Registration
-
-Patients can be registered through the community health worker interface:
-
-1. Navigate to the **Patient Registration** section
-2. Collect and enter patient information as prompted
-3. All personally identifiable information is processed to ensure anonymity in the database
-4. Save the patient record
-
-### Login
-
+**Login:**
 1. Tap **INJIRA** (Login) on the landing screen
-2. Enter your registered **Rwandan phone number** (must match the number used during registration)
-3. Enter your password or request an OTP
-4. Upon successful authentication, you will access the main application dashboard
+2. Enter registered phone number and password
+3. Access the main consultation recording dashboard
 
-**Note:** The application requires a valid Rwandan mobile number for authentication and OTP verification.
+**Note:** CHW authentication required a valid Rwandan mobile number for the study tracking and data security.
+
+### Recording Patient Consultations
+
+The primary workflow for this application:
+
+1. CHW logs into the application
+2. At the start of a patient consultation, CHW taps the **Record** button
+3. Application begins capturing audio of the consultation and automatically transcribes speech to text
+4. At the end of the consultation, CHW stops recording
+5. CHW Enters patient key information (age, weight,temperature)
+6. CHW conduct a patient UX interview
+7. When connectivity is available, application automatically uploads encrypted data to research servers
 
 ### Application Features
 
-**Core Features:**
+**Data Capture Functions:**
 
-- Patient information management and updates
-- Health encounter documentation
-- Secure message storage
-- Data synchronization with backend systems
-- Offline access to previously downloaded data
-- Multi-language user interface
+- One-tap audio recording of patient-CHW consultations
+- Secure encrypted transmission to research servers
+- Offline mode for areas with limited connectivity
+- Simple CHW-friendly interface designed for field use
 
 ---
 
@@ -185,19 +179,15 @@ Patients can be registered through the community health worker interface:
 
 ### Information Collected
 
-The RBC Mbaza application collects health and administrative data including:
+The RBC Mbaza application captures clinical consultations through audio recording and capture patient information:
 
-- **Patient Demographics:** Age, gender, location, contact information
-- **Health Information:** Chief complaints, vital signs, diagnoses, treatments
-- **Administrative Data:** Visit dates, CHW information, facility references
+- **Consultation Audio:** Complete recordings of patient-CHW interactions
+- **Patient information:** Chief complaints, symptom descriptions, and health history as reported by patients
+- **CHW Assessment:** Clinical observations, examination findings, and recommended actions (diagnosis/referral decisions)
+- **Session Metadata:** Timestamp, location, CHW identifier, and encounter sequence number
 
 
-### Data Cleaning and Preprocessing
 
-- Input validation at the point of data entry
-- Automated data quality checks for completeness and consistency
-- Regular cleaning cycles to remove duplicates and inconsistencies
-- Data standardization across multiple collection sites
 
 ---
 
@@ -209,10 +199,10 @@ The RBC Mbaza application collects health and administrative data including:
 - **Status:** Application code available under CC BY-NC-SA 4.0 license
 - **License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
-### Test Datasets
+### Datasets
 
-- **Availability:** Sample/anonymized datasets available for integration testing
-- **Access:** Contact info@digitalumuganda.com for access credentials
+- **Availability:** Sample/anonymized datasets available 
+- **Access:** Contact info@c4ir.rw for access credentials
 
 ### Compiled Application
 
@@ -228,7 +218,6 @@ The RBC Mbaza application collects health and administrative data including:
 ### Code Access After Publication
 
 Information on obtaining code and data post-publication is available through:
-- Digital Umuganda official website
 - GitHub repository (when released)
 - Direct contact with development team
 
@@ -238,9 +227,11 @@ Information on obtaining code and data post-publication is available through:
 
 ### Data Sources
 
-All data collected through the RBC Mbaza application originates from:
+All consultation recordings captured through the RBC Mbaza silent trial originated from:
 
-**Direct patient encounters** with select community health workers from Nyabihu and Musanze
+- **Direct patient encounters** with 150+ trained community health workers across 2 districts in Rwanda
+- **Clinical consultations** in Kinyarwanda conducted in health posts and community settings
+- **Research study period:** 2025 (silent trial study for AI assessment)
 
 
 
@@ -248,7 +239,7 @@ All data collected through the RBC Mbaza application originates from:
 
 - **Current Status:** Data is not publicly available due to patient privacy considerations
 - **Restricted Access:** Anonymized research datasets are available to approved researchers under data use agreements
-- **Request Process:** Contact info@digitalumuganda.com to request research datasets. All requests must include: intended use, research institution, data protection plan, and ethics approval documentation
+- **Request Process:** Contact info@c4ir.rw to request research datasets. All requests must include: intended use, research institution, data protection plan, and ethics approval documentation
 
 ---
 
